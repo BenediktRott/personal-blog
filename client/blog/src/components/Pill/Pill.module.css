@@ -1,0 +1,35 @@
+.pill {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  border: 3px solid var(--font-black);
+  --pill-color: white;
+  background-color: var(--pill-color);
+  border-radius: 9999px;
+  padding: 8px 22px;
+  font-weight: 600;
+  backface-visibility: hidden;
+  transition: transform 100ms ease-in-out;
+}
+
+.pill::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 4px;
+}
+
+.pill:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
+.noHover.pill:hover {
+  text-decoration: none;
+  transform: none;
+  cursor: default;
+}

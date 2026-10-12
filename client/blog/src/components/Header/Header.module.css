@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0px;
+}
+
+.logo {
+  --pill-color: var(--logo-background) !important;
+  margin-right: auto;
+  box-shadow: var(--font-black) 4px 4px 0px;
+  font-weight: 900;
+}
+
+.logo h1 {
+  margin: 0;
+}

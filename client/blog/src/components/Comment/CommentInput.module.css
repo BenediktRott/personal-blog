@@ -1,0 +1,34 @@
+.commentInput {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 120px;
+  padding: 16px;
+  font-size: 1rem;
+  border: 3px solid var(--font-black);
+  border-radius: 12px;
+  resize: vertical;
+  outline: none;
+  transition:
+    box-shadow 100ms ease-in-out,
+    transform 100ms ease-in-out;
+  margin-bottom: 16px;
+}
+
+/* Matches your card/pill focus/interaction style */
+.commentInput:focus {
+  transform: translateY(-2px);
+  box-shadow: rgb(22, 22, 29) 4px 4px 0px;
+}
+
+.commentInput::placeholder {
+  color: rgb(150, 150, 160);
+}
+
+.contentContainer {
+  padding: 16px;
+}
+
+.pillContainer {
+  display: flex;
+  justify-content: flex-end;
+}

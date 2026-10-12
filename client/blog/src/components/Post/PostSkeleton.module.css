@@ -1,0 +1,47 @@
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.skeletonContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 28px;
+  gap: 16px;
+}
+
+.categorySkeleton {
+  width: 70px;
+  height: 32px;
+  background-color: var(--loading-light);
+  border-radius: 9999px;
+}
+
+.titleSkeleton {
+  width: 60%;
+  height: 24px;
+  background-color: var(--loading-light);
+  border-radius: 4px;
+}
+
+.textSkeleton {
+  width: 100%;
+  height: 48px;
+  background-color: var(--loading-light);
+  border-radius: 4px;
+}
+
+.dateSkeleton {
+  width: 100px;
+  height: 16px;
+  background-color: var(--loading-light);
+  border-radius: 4px;
+}

@@ -1,0 +1,49 @@
+.contentArea {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.titleCard {
+  padding: 56px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.title {
+  font-size: 68px;
+  margin: 0px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.date {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.textCard {
+  max-width: 100ch;
+  white-space: pre-line;
+  padding: 48px 44px;
+  font-size: 20px;
+}
+
+.commentsPill {
+  --pill-color: var(--logo-background);
+}
+
+.commentsPill:hover {
+  transform: none;
+  text-decoration: none;
+  cursor: default;
+}
+
+.commentsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

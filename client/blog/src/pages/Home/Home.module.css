@@ -1,0 +1,47 @@
+.readLatest {
+  --pill-color: var(--logo-background) !important;
+  box-shadow: var(--font-black) 4px 4px 0px;
+  font-weight: 900;
+  color: var(--font-black);
+  font-size: 18px;
+  align-self: flex-start;
+  padding: 12px 28px;
+}
+
+.heroContent {
+  display: flex;
+  gap: 32px;
+  padding: 56px 48px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.heroText {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: white;
+  font-size: 22px;
+}
+
+.heroText p {
+  margin: 0;
+}
+
+.heroText h1 {
+  font-size: 76px;
+  margin: 0;
+}
+
+.image {
+  flex: 0 0 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  background-color: var(--accent);
+  width: 250px;
+  border-radius: 9999px;
+}

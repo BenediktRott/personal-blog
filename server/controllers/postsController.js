@@ -7,10 +7,12 @@ import { matchedData } from "express-validator";
 export const getPosts = [
   authenticateToken,
   async (req, res) => {
-    console.log(req.user);
     const posts = await prisma.post.findMany({
       where: {
         OR: [{ visibility: Visibility.PUBLIC }, { authorId: req.user.id }],
+      },
+      orderBy: {
+        publishedAt: "desc",
       },
     });
     res.json(posts);
@@ -80,5 +82,20 @@ export const deletePostsId = [
     } catch (err) {
       next(err);
     }
+  },
+];
+
+export const getLatest = [
+  authenticateToken,
+  async (req, res, next) => {
+    const latestPost = await prisma.post.findFirst({
+      where: {
+        OR: [{ visibility: Visibility.PUBLIC }, { authorId: req.user.id }],
+      },
+      orderBy: {
+        publishedAt: "desc",
+      },
+    });
+    res.json(latestPost);
   },
 ];

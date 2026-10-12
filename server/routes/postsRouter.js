@@ -7,6 +7,7 @@ export const postsRouter = new Router();
 postsRouter.use("/:id/comments", commentsRouter);
 
 postsRouter.get("/", postsController.getPosts);
+postsRouter.get("/latest", postsController.getLatest);
 postsRouter.get("/:id", postsController.getPostsId);
 
 postsRouter.post("/", postsController.postPosts);

@@ -1,0 +1,10 @@
+.postsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.error {
+  margin-top: 32px;
+}

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src:
+    url("./assets/fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.woff2")
+      format("woff2"),
+    url("./assets/fonts/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.woff")
+      format("woff");
+  font-weight: 200 800;
+  font-stretch: 75% 100%;
+  font-display: swap;
+}
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 400;
+  --background-color: rgb(244, 241, 255);
+  --logo-background: rgb(255, 210, 63);
+  --font-black: rgb(22, 22, 29);
+  --hero-background: rgb(43, 60, 255);
+  --accent: rgb(255, 143, 177);
+  --accent2: rgb(126, 232, 192);
+  --loading-light: rgb(220, 220, 225);
+}

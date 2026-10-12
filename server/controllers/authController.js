@@ -28,7 +28,7 @@ export const postLogin = [
         res.status(401).json({ error: "Invalid email or password" });
 
       const token = jwt.sign({ id: user.id }, process.env.SERVER_SECRET, {
-        expiresIn: "1h",
+        expiresIn: "1d",
       });
 
       res.json({ message: "Login successful", token });
@@ -44,6 +44,7 @@ export const postRegister = [
   async (req, res) => {
     try {
       const { username, password } = matchedData(req);
+      console.log(username);
 
       const hashedPassword = await bcrypt.hash(password, 10);
       const newUser = await prisma.user.create({
@@ -56,7 +57,7 @@ export const postRegister = [
       if (!newUser) res.status(500).json({ error: "Internal server error" });
 
       const token = jwt.sign({ id: newUser.id }, process.env.SERVER_SECRET, {
-        expiresIn: "1h",
+        expiresIn: "1d",
       });
 
       res.json({ message: "Registration successful", token });

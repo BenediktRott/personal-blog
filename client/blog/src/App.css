@@ -1,0 +1,12 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: var(--background-color);
+}
+
+.contentArea {
+  box-sizing: border-box;
+  width: min(1200px, 100%);
+  padding: 0rem 2rem;
+  margin: 0 auto;
+}

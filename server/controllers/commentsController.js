@@ -47,9 +47,16 @@ export const postComments = [
           authorId: req.user.id,
           postId: Number(req.params.id),
         },
+        include: {
+          author: {
+            select: {
+              username: true,
+            },
+          },
+        },
       });
 
-      res.json({ message: "Comment created successfully" });
+      res.json(comment);
     } catch (error) {
       next(error);
     }
